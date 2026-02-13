@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Art World - Premium Artist Materials Wholesale | Jammu</title>
+    <meta name="description" content="Premium artist materials wholesale supplier in Jammu. Professional canvases, fine art brushes, pigments, oils, and sketching tools.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        noir: '#121212',
+                        'noir-light': '#1e1e1e',
+                        'noir-lighter': '#2a2a2a',
+                        gold: '#D4AF37',
+                    },
+                    fontFamily: {
+                        'display': ['Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Styles */
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        
+        /* Gradient overlay for hero */
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.95) 0%, rgba(30, 30, 30, 0.9) 100%);
+        }
+        
+        /* Card hover effects */
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+        }
+        
+        /* Gold accent glow */
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Form input styles */
+        input, textarea, select {
+            background-color: #1e1e1e;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        
+        /* Loading animation */
+        .spinner {
+            border: 3px solid rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid #D4AF37;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Fade in animation */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-noir/95 backdrop-blur-sm z-50 border-b border-noir-lighter">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-display text-gold">Angel Art World</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-gold transition">Home</a>
+                    <a href="#about" class="hover:text-gold transition">About</a>
+                    <a href="#products" class="hover:text-gold transition">Products</a>
+                    <a href="#contact" class="hover:text-gold transition">Contact</a>
+                    <a href="admin.html" class="text-gold hover:text-gold/80 transition">Admin</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gold">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="#home" class="block hover:text-gold transition">Home</a>
+                <a href="#about" class="block hover:text-gold transition">About</a>
+                <a href="#products" class="block hover:text-gold transition">Products</a>
+                <a href="#contact" class="block hover:text-gold transition">Contact</a>
+                <a href="admin.html" class="block text-gold hover:text-gold/80 transition">Admin</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center fade-in">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-6">
+                    <i data-lucide="palette" class="w-16 h-16 mx-auto text-gold mb-4"></i>
+                </div>
+                <h2 class="text-5xl md:text-7xl font-display mb-6 leading-tight">
+                    Premium Artist Materials.<br>
+                    <span class="text-gold">Wholesale.</span><br>
+                    Jammu.
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8 font-light italic">
+                    Where creativity meets quality, and artistry finds its finest tools.
+                </p>
+                <a href="#contact" class="inline-block bg-gold text-noir px-10 py-4 rounded-sm font-semibold hover:gold-glow transition transform hover:scale-105">
+                    Request Wholesale Inquiry
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-gold"></i>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-noir-light">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-4xl md:text-5xl font-display mb-8 text-gold">Crafted for Artists</h3>
+                <div class="h-1 w-24 bg-gold mx-auto mb-8"></div>
+                <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+                    For over a decade, Angel Art World has been the cornerstone of artistic excellence in Jammu. 
+                    We supply the finest materials to professional artists, art schools, and creative studios across the region.
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                    Every brush stroke, every canvas, every pigment tells a story. 
+                    We ensure that story begins with uncompromising quality and authenticity.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div class="text-center">
+                        <i data-lucide="award" class="w-12 h-12 mx-auto text-gold mb-4"></i>
+                        <h4 class="text-2xl font-semibold mb-2">Premium Quality</h4>
+                        <p class="text-gray-400">Sourced from trusted international suppliers</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="truck" class="w-12 h-12 mx-auto text-gold mb-4"></i>
+                        <h4 class="text-2xl font-semibold mb-2">Wholesale Pricing</h4>
+                        <p class="text-gray-400">Competitive rates for bulk orders</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="map-pin" class="w-12 h-12 mx-auto text-gold mb-4"></i>
+                        <h4 class="text-2xl font-semibold mb-2">Local Expertise</h4>
+                        <p class="text-gray-400">Serving Jammu's artistic community</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-noir">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-display mb-4 text-gold">Our Collections</h3>
+                <div class="h-1 w-24 bg-gold mx-auto mb-6"></div>
+                <p class="text-xl text-gray-400">Curated materials for the discerning artist</p>
+            </div>
+            
+            <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact/Inquiry Section -->
+    <section id="contact" class="py-20 bg-noir-light">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-4xl md:text-5xl font-display mb-4 text-gold">Wholesale Inquiry</h3>
+                    <div class="h-1 w-24 bg-gold mx-auto mb-6"></div>
+                    <p class="text-xl text-gray-400">Begin your partnership with excellence</p>
+                </div>
+                
+                <form id="inquiryForm" class="bg-noir-lighter p-8 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-300">Your Name *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded text-gray-100" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-300">Business Name</label>
+                            <input type="text" name="business" class="w-full px-4 py-3 rounded text-gray-100" placeholder="Art Studio XYZ">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-300">Email Address *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded text-gray-100" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-300">Phone Number *</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded text-gray-100" placeholder="+91 XXXXX XXXXX">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Product Category</label>
+                        <select name="category" class="w-full px-4 py-3 rounded text-gray-100">
+                            <option value="">Select a category</option>
+                            <option value="canvases">Professional Canvases</option>
+                            <option value="brushes">Fine Art Brushes</option>
+                            <option value="pigments">Pigments & Oils</option>
+                            <option value="sketching">Sketching Tools</option>
+                            <option value="multiple">Multiple Categories</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">Message *</label>
+                        <textarea name="message" required rows="5" class="w-full px-4 py-3 rounded text-gray-100" placeholder="Tell us about your requirements, quantity needed, and any specific preferences..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gold text-noir px-8 py-4 rounded font-semibold hover:gold-glow transition transform hover:scale-105 flex items-center justify-center">
+                        <span>Submit Inquiry</span>
+                        <i data-lucide="send" class="w-5 h-5 ml-2"></i>
+                    </button>
+                    
+                    <div id="formMessage" class="mt-4 text-center hidden"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-noir border-t border-noir-lighter py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-2xl font-display text-gold mb-4">Angel Art World</h4>
+                    <p class="text-gray-400 mb-4">Premium artist materials wholesale supplier serving Jammu's creative community.</p>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-semibold mb-4 text-gold">Location</h5>
+                    <div class="flex items-start space-x-3 text-gray-400">
+                        <i data-lucide="map-pin" class="w-5 h-5 mt-1 text-gold"></i>
+                        <p>Angel Art World<br>Jammu, Jammu and Kashmir<br>India</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-semibold mb-4 text-gold">Connect With Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gold transition">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gold transition">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gold transition">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gold transition">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-noir-lighter mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2026 Angel Art World. All rights reserved. | Crafted with passion for artists.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
